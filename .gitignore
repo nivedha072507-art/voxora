@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets — never commit
+.env
+*.pem
+*.key
+
+# Local model / dataset artifacts (distribute out-of-band, record digest in
+# model_checksums.txt)
+*.pkl
+voxera_7signs_data.csv

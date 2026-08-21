@@ -1,0 +1,3 @@
+# SHA-256 digests of the model files VOXORA is allowed to unpickle.
+# Regenerate with: sha256sum voxera_7signs_model.pkl
+1246ba77b38c2ba2cc56fd9f5a61a3debbaa7ae6378ae7df930efd5f059b68dc  voxera_7signs_model.pkl
