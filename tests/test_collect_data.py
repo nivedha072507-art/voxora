@@ -3,7 +3,6 @@
 import csv
 
 import pytest
-
 import stubs
 from fakes import Results, make_hand
 

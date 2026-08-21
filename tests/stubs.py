@@ -9,6 +9,7 @@ asserted on.
 
 import sys
 import types
+from typing import ClassVar
 
 import numpy as np
 
@@ -139,7 +140,10 @@ class RequestError(Exception):
 class FakeRecognizer:
     """Recognizer whose ``recognize_google`` result is scripted by the test."""
 
-    microphone_names = ["Speakers (Realtek)", "Microphone Array (Realtek Audio)"]
+    microphone_names: ClassVar[list] = [
+        "Speakers (Realtek)",
+        "Microphone Array (Realtek Audio)",
+    ]
 
     # When set, calibration reports this ambient noise floor.
     ambient_energy = None
@@ -171,8 +175,8 @@ class FakeRecognizer:
 
 
 class FakeMicrophone:
-    instances = []
-    available_names = FakeRecognizer.microphone_names
+    instances: ClassVar[list] = []
+    available_names: ClassVar[list] = FakeRecognizer.microphone_names
     raise_on_init = None
 
     def __init__(self, device_index=None):
@@ -220,7 +224,7 @@ class FakeStream:
 
 
 class FakePyAudio:
-    instances = []
+    instances: ClassVar[list] = []
 
     def __init__(self):
         self.streams = []

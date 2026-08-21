@@ -2,10 +2,9 @@
 
 import numpy as np
 import pytest
-from PIL import ImageDraw
-
 import stubs
 from fakes import FakeModel, Results, make_hand
+from PIL import ImageDraw
 
 
 @pytest.fixture

@@ -1,7 +1,6 @@
 """Tests for the prediction smoothing loop in 03_live_inference.py."""
 
 import pytest
-
 import stubs
 from fakes import FakeModel, Results, make_hand
 

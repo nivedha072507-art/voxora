@@ -2,7 +2,6 @@
 
 import numpy as np
 import pytest
-
 import stubs
 from fakes import FakeModel, Results, make_hand
 

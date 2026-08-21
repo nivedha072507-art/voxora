@@ -1,7 +1,6 @@
 """Tests for 04_speech_to_text.py, the standalone speech recognition helper."""
 
 import pytest
-
 import stubs
 
 

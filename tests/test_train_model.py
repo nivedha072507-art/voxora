@@ -46,11 +46,8 @@ def test_trained_model_predicts_the_training_signs(dataset, load_script):
     with open(dataset / MODEL, "rb") as f:
         model = pickle.load(f)
 
-    frame = next(
-        row
-        for row in csv.reader(open(dataset / DATASET))
-        if row[-1] in SIGNS
-    )
+    with open(dataset / DATASET, newline="") as f:
+        frame = next(row for row in csv.reader(f) if row[-1] in SIGNS)
     features = np.array([float(value) for value in frame[:-1]])
 
     assert model.predict([features])[0] == frame[-1]

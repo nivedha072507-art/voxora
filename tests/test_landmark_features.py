@@ -2,7 +2,6 @@
 
 import numpy as np
 import pytest
-
 from fakes import Hand, Landmark, Results, make_degenerate_hand, make_hand
 
 SCRIPTS_WITH_EXTRACTOR = [

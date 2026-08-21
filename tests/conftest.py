@@ -11,8 +11,8 @@ PROJECT_ROOT = os.path.dirname(TESTS_DIR)
 if TESTS_DIR not in sys.path:
     sys.path.insert(0, TESTS_DIR)
 
-import fakes  # noqa: E402  (needs the sys.path entry above)
-import stubs  # noqa: E402
+import fakes
+import stubs
 
 SCRIPTS = {
     "collect_data": "01_collect_data.py",
